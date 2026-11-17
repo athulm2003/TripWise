@@ -1,0 +1,77 @@
+###  Api call for add a New User
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "roshan@2004",
+    "email" : "roshan123@gmail.com",
+    "password" : "roshan,2004"
+}
+
+### List all Users
+GET http://127.0.0.1:8000/register/
+Accept: application/json
+
+### Delete Users
+DELETE http://127.0.0.1:8000/register/8/
+
+### List all Trips
+GET http://127.0.0.1:8000/trips/
+Accept: application/json
+Authorization: Basic AthulM2003:athul,2003
+#to check the authentication of the user
+
+
+### Add Trips
+POST http://127.0.0.1:8000/trips/
+Content-Type: application/json
+Authorization: Basic AthulM2003:athul,2003
+
+{
+    "title" : " Trip to Wonderla",
+    "destination" : "Kochi",
+    "start_date" : "2026-12-5"
+    
+}
+
+### Get a Single Trip Details
+GET http://127.0.0.1:8000/trips/11/
+Accept: application/json
+Authorization: Basic AthulM2003:athul,2003
+
+### Update a Trip
+put http://127.0.0.1:8000/trips/11/
+Content-Type: application/json
+Authorization: Basic AthulM2003:athul,2003
+
+{
+    "title" : " Trip to Wonderla",
+    "destination" : "Kochi",
+    "start_date" : "2026-11-29"
+    
+}
+
+
+### Delete a Trip
+DELETE http://127.0.0.1:8000/trips/7/
+Authorization: Basic Deepu@2006:deepu,2006
+
+### Api for List the Members on a Trip
+GET http://127.0.0.1:8000/trips/11/members/ 
+Accept: application/json
+Authorization: Basic AthulM2003:athul,2003
+
+### Add Members to a Trip
+POST http://127.0.0.1:8000/trips/11/members/ 
+Content-Type: application/json
+Authorization: Basic AthulM2003:athul,2003
+
+{
+    "username" : "roshan@2004"
+}
+
+###
+DELETE  http://127.0.0.1:8000/trips/11/members/3/
+Authorization: Basic AthulM2003:athul,2003
+
+
